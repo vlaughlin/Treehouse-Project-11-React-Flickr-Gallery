@@ -5,9 +5,9 @@ import {
 } from 'react-router-dom';
 
 //App components
-import Cats from './Cats';
-import Dogs from './Dogs';
-import Computers from './Computers';
+import Cats from './components/navigation/Cats';
+import Dogs from './components/navigation/Dogs';
+import Computers from './components/navigation/Computers';
 
  const App = () => (
 <BrowserRouter>
