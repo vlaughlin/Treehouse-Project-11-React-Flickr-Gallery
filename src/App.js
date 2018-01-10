@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   BrowserRouter,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom';
 
 //App components
@@ -14,11 +15,13 @@ import NotFound from './components/navigation/NotFound';
  const App = () => (
 <BrowserRouter>
 <div className="container">
+<Switch>
 <Route exact path= "/" component={SearchForm} />
 <Route exact path= "/cats" component={Cats} />
 <Route exact path= "/dogs" component={Dogs} />
 <Route exact path= "/computers" component={Computers} />
 <Route component={NotFound} />
+</Switch>
 </div>
 </BrowserRouter>
 );
