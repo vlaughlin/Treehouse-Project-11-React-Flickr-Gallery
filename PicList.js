@@ -3,11 +3,16 @@ import Pic from './Pic';
 
 const PicList = props => {
 
+const results = props.data;
+let pics = results.map(pic =>
+<Pic url={pic.images.fixed_height.url} />
+
+);
+
 return (
 
 <ul className="pic-list">
-
-<Pic />
+{pics}
 </ul>
 
 );
