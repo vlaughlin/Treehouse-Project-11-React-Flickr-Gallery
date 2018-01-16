@@ -5,7 +5,7 @@ const PicList = props => {
 
 const results = props.data;
 let pics = results.map(pic =>
-<Pic url={pic.images.fixed_height.url} />
+<Pic url={pic.images.fixed_height.url} key={pic.id} />
 
 );
 
