@@ -13,6 +13,7 @@ import SearchForm from './components/navigation/SearchForm';
 import Cats from './components/navigation/Cats';
 import Dogs from './components/navigation/Dogs';
 import Computers from './components/navigation/Computers';
+import NotFound from './components/navigation/NotFound'
 
 const App = () => (
 <BrowserRouter>
@@ -20,9 +21,11 @@ const App = () => (
 <Nav />
 <div className="container">
 <Switch>
+<Route exact path="/" render={ () => (<SearchForm />)} />
 <Route path="/cats" render={ () => <Cats />} />
 <Route path="/dogs" render={ () => <Dogs />} />
 <Route path="/computers" render={ () => <Computers />} />
+ <Route component={NotFound} />
 
 </Switch>
  </div>
