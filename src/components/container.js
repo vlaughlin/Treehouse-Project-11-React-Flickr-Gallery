@@ -13,6 +13,7 @@ export default class Container extends Component {
    this.state = {
    pics: [],
    loading: true
+   query: ''
    };
  }
 

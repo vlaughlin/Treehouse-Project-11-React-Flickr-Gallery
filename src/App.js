@@ -16,21 +16,21 @@ import Computers from './components/navigation/Computers';
 import NotFound from './components/navigation/NotFound'
 
 const App = () => (
-<BrowserRouter>
-<div>
-<Nav />
-<div className="container">
-<Switch>
-<Route exact path="/" render={ () => (<SearchForm />)} />
-<Route path="/cats" render={ () => <Cats />} />
-<Route path="/dogs" render={ () => <Dogs />} />
-<Route path="/computers" render={ () => <Computers />} />
- <Route component={NotFound} />
+    <BrowserRouter>
+     <div>
+     <Nav />
+      <div className="container">
+        <Switch>
+          <Route exact path="/" render={ () => (<SearchForm />)} />
+          <Route exact path="/cats" render={ () => (<Cats query={"cats"} />) } />
+          <Route exact path="/dogs" render={ () => (<Dogs query={"dogs"} />)} />
+          <Route exact path="/computers" render={ () => (<Computers query={"computers"} />)} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+      </div>
 
-</Switch>
- </div>
-</div>
-</BrowserRouter>
+    </BrowserRouter>
 );
 
 export default App;
