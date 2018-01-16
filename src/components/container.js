@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import axios from 'axios';
 
+import PicList from './components/navigation/PicList';
+
 import apiKey from '../config.js';
 
 export default class Container extends Component {
@@ -9,17 +11,18 @@ export default class Container extends Component {
   constructor() {
    super();
    this.state = {
-   pics: []
-
-
+   pics: [],
+   loading: true
    };
  }
 
  componentDidMount() {
 
+   this.performSearch();
+
   }
 
-  performSearch = (query) => {
+  performSearch = (query = 'cats') => {
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${this.props.query}&per_page=24&format=json&nojsoncallback=1`)
     .then(response => {
         this.setState({
