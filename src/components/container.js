@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
-export default class App extends Component {
+import axios from 'axios';
+
+import apiKey from '../config.js';
+
+export default class Container extends Component {
 
   constructor() {
    super();
@@ -22,4 +26,20 @@ export default class App extends Component {
       .catch(error => {
         console.log('Error fetching and parsing data', error);
       });
+  }
+
+  render() {
+    console.log(this.state.pics);
+    return (
+      <div className="container">
+              <div className="photo-container">
+                {
+                  (this.state.loading)
+                    ? <p>Loading...</p>
+                    : <PicList data={this.state.pics} query={this.state.query} />
+                }
+            </div>
+          </div>
+);
+  }
   }
