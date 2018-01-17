@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import axios from 'axios';
 
-import PicList from './components/navigation/PicList';
+import PicList from './components/Photos/PicList';
 
 import apiKey from '../config.js';
 
@@ -12,7 +12,7 @@ export default class Container extends Component {
    super();
    this.state = {
    pics: [],
-   loading: true
+   loading: true,
    query: ''
    };
  }

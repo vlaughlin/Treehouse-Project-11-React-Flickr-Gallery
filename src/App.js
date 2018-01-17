@@ -13,7 +13,7 @@ import SearchForm from './components/navigation/SearchForm';
 import Cats from './components/navigation/Cats';
 import Dogs from './components/navigation/Dogs';
 import Computers from './components/navigation/Computers';
-import NotFound from './components/navigation/NotFound'
+import NotFound from './components/Photos/NotFound'
 
 const App = () => (
     <BrowserRouter>
