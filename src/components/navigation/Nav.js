@@ -1,9 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-class Nav extends React.Component {
-  render () {
-    return (
+const Nav = props => (
+
 
   <nav className="main-nav">
          <ul>
@@ -14,10 +13,7 @@ class Nav extends React.Component {
          </ul>
        </nav>
 
-
-
            );
-         }
-       }
+
 
 export default Nav;
