@@ -1,15 +1,15 @@
-
-
 import React from 'react';
-
+import Nav from './Nav';
+import Container from '../Container';
 
 const Dogs = props => {
-  return (
-    <div>
 
+return (
 
+<div>
+<h2>{props.query}</h2>
+<Container query={"dogs"} />
     </div>
-  )
+)
 }
-
 export default Dogs;
