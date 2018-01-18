@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import axios from 'axios';
 
-import PicList from './components/Photos/PicList';
+import PicList from './Photos/PicList';
 
 import apiKey from '../config.js';
 
