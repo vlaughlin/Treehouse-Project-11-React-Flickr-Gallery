@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import axios from 'axios';
 
-import PhotoList from './Photos/PicList';
+import PicList from './Photos/PicList';
 
 import apiKey from '../config.js';
 
@@ -54,7 +54,7 @@ class Container extends Component {
                 {
                   (this.state.loading)
                     ? <p>Loading...</p>
-                    : <PhotoList data={this.state.photos} query={this.state.query} />
+                    : <PicList data={this.state.photos} query={this.state.query} />
                 }
             </div>
           </div>
