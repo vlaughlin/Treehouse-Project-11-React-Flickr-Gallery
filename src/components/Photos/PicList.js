@@ -1,6 +1,6 @@
 import React from 'react';
-import Pic from './components/Photos/Pic';
-import NoPics from './components/Photos/NoPics';
+import Pic from '../Photos/Pic';
+import NoPics from '../Photos/NoPics'
 
 
 const PicList = props => {
