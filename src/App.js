@@ -21,10 +21,10 @@ const App = () => (
      <Nav />
       <div className="container">
         <Switch>
-          <Route exact path="/" render={ () => (<SearchForm />)} />
-          <Route exact path="/cats" render={ () => (<Cats query={"cats"} />) } />
-          <Route exact path="/dogs" render={ () => (<Dogs query={"dogs"} />)} />
-          <Route exact path="/computers" render={ () => (<Computers query={"computers"} />)} />
+          <Route exact path="/" component={ () => (<SearchForm />)} />
+          <Route exact path="/cats" component={ () => (<Cats query={"cats"} />) } />
+          <Route exact path="/dogs" component={ () => (<Dogs query={"dogs"} />)} />
+          <Route exact path="/computers" component={ () => (<Computers query={"computers"} />)} />
           <Route component={NotFound} />
         </Switch>
       </div>
