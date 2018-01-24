@@ -29,7 +29,10 @@ this.performSearch(this.props.query);
 }
 
 componentWillReceiveProps(nextProps) {
-  this.setState({ query: nextProps.query });
+  this.setState({ query: nextProps.query,
+  loading:true
+});
+
   this.performSearch(nextProps.query);
 }
 
