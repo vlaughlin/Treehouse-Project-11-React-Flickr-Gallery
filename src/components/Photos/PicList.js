@@ -3,6 +3,9 @@ import Pic from '../Photos/Pic';
 import NoPics from '../Photos/NoPics'
 
 
+/*PicList contains the wrapping ul element that will display the list of pictures via the pics component. It will recieve data from the app and be responsible for how the list of pictures looks. */
+
+
 const PicList = props => {
 
 const results = props.data;
@@ -14,7 +17,6 @@ if (results.length > 0) {
    pics = <NoPics />
 
 }
-
 
 return(
     <div>

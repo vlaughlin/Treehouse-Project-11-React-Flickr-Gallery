@@ -10,6 +10,8 @@ import apiKey from '../config.js';
 
 class Container extends Component {
 
+/* Defined an initial state inside a class using constructor. Super is called. this.state will have the Fickr img data that will be displayed. The photos sate represents a collection of objects
+that will change and be updated by components*/
 
   constructor() {
 
@@ -21,6 +23,7 @@ class Container extends Component {
     };
   }
 
+/* Data fetching is set inside componentDidMount Life Cycle Method // componentDidMount means: Immediately after the component is added to the DOM  */
 
   componentDidMount() {
 
@@ -32,9 +35,10 @@ componentWillReceiveProps(nextProps) {
   this.setState({ query: nextProps.query,
   loading:true
 });
-
   this.performSearch(nextProps.query);
 }
+
+/*Fetching Data with Axios. The get method performs request.  The catch method will handle errors. performSearch fetches the data and updates the photos state when called*/
 
   performSearch = (query) => {
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
