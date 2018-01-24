@@ -22,24 +22,23 @@ class Container extends Component {
   }
 
 
-    componentDidMount() {
+  componentDidMount() {
 
-      this.performSearch();
+this.performSearch(this.props.query);
 
-     }
+}
 
+componentWillReceiveProps(nextProps) {
+  this.setState({ query: nextProps.query });
+  this.performSearch(nextProps.query);
+}
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ query: nextProps.query });
-    this.performSearch(nextProps.query);
-  }
-
-  performSearch = () => {
-    axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${this.props.query}&per_page=24&format=json&nojsoncallback=1`)
+  performSearch = (query) => {
+    axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
     .then(response => {
         this.setState({
           photos: response.data.photos.photo,
-          loading: false,
+          loading: false
         });
       })
       .catch(error => {
@@ -48,6 +47,8 @@ class Container extends Component {
   }
 
   render() {
+console.log(this.state.photos);
+
     return (
           <div className="container">
               <div className="photo-container">
