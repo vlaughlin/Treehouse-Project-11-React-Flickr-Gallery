@@ -19,14 +19,20 @@ handleSubmit = e => {
      e.currentTarget.reset();
    }
 
-
 render() {
       return (
 
              <div>
           <form className="search-form" onSubmit={this.handleSubmit}>
            <label className="is-hidden" htmlFor="search"></label>
-         <input type="search" onChange={this.onSearchChange} value={this.state.query} name="search" placeholder="Search..."/>
+          <input type=
+          "search"
+          onChange={this.onSearchChange}
+                 name="search"
+
+
+                 placeholder="Search..." />
+
 
           <button type="submit"  id="submit" className="search-button">
             <svg fill="#fff" height="24" viewBox="0 0 23 23" width="24" xmlns="http://www.w3.org/2000/svg">
