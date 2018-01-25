@@ -1,9 +1,12 @@
 import React from 'react';
+
+
 import { NavLink } from 'react-router-dom';
 
 const Nav = props => (
 
-
+// The <NavLink> component is a special version of the <Link> component.
+//It adds the properties activeClassName and activeStyle to give styling options when the link matches the location URL.
   <nav className="main-nav">
          <ul>
            <li><NavLink exact to='/'>Search</NavLink></li>

@@ -53,6 +53,7 @@ componentWillReceiveProps(nextProps) {
       });
   }
 
+//Renders photo data and loading message
   render() {
 console.log(this.state.photos);
 

@@ -4,14 +4,18 @@ import Container from '../Container'
 
 export default class SearchForm extends Component {
 
+// The Default Search State is set
+
   state = {
      query: 'Search'
     }
 
-
+//The search state is added to the value of the search form input
       onSearchChange = e => {
           this.setState({ query: e.target.value });
         }
+
+  //handleSubmit listens to browser events, like the submit event on the form
 
 handleSubmit = e => {
      e.preventDefault();
@@ -19,6 +23,7 @@ handleSubmit = e => {
      e.currentTarget.reset();
    }
 
+//The Searchform and Container component are rendered
 render() {
       return (
 

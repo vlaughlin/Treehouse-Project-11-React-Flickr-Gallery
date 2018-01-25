@@ -1,6 +1,8 @@
 import React from 'react';
 import Container from '../Container';
 
+//The dogs query is passed into the Container component via props
+
 const Dogs = props => {
 
 return (

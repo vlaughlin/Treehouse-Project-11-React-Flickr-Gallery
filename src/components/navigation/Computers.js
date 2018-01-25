@@ -1,6 +1,8 @@
 import React from 'react';
 import Container from '../Container';
 
+//The computers query is passed into the Container component via props
+
 const Computers = props => {
 
 return (
