@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Displays message when no pictures match search 
+
 const NoPics = props => (
 
     <li className='no-pics'>

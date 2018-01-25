@@ -1,5 +1,6 @@
 import React from 'react';
 
+/*displays 404 error*/
 
 const NotFound = props => (
 
